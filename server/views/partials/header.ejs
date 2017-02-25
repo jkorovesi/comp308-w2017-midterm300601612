@@ -35,21 +35,13 @@
 
     <% if(typeof displayName == 'string' && displayName) { %>
           <% if(title == "Books") { %>
-          <li class="active"><a href="/books"><i class="fa fa-bookpad fa-lg">
-          </i> Books List</a></li>
-          <% } else { %>
-            <li><a href="/books"><i class="fa fa-bookpad fa-lg">
-            </i> Books List</a></li>
-          <% } %>
-        <% } %>
-
-          <% if(title == "books") { %>
           <li class="active"><a href="/books"><i class="fa fa-book fa-lg">
           </i> Books List</a></li>
           <% } else { %>
             <li><a href="/books"><i class="fa fa-book fa-lg">
             </i> Books List</a></li>
           <% } %>
+        <% } %>
 
           <% if(typeof displayName == 'string' && displayName) { %>
           <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= displayName %></li>

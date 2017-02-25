@@ -88,7 +88,7 @@ router.post('/register', (req, res, next)=>{
         }
         return res.render('auth/register', {
           title: "Register",
-          games: '',
+          books: '',
           messages: req.flash('registerMessage'),
           displayName: req.user ? req.user.displayName : ''
         });
