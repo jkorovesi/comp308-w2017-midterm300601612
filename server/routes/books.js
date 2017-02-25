@@ -58,10 +58,11 @@ router.get('/add', requireAuth, (req, res, next) => {
 router.post('/add', requireAuth, (req, res, next) => {
 
     let newBook = book({
-      "title": req.body.Title,
-      "price": req.body.Price,
-      "author": req.body.Author,
-      "genre": req.body.Genre
+      "Title": req.body.title,
+      "Description": req.body.description,
+      "Price": req.body.price,
+      "Author": req.body.author,
+      "Genre": req.body.genre
     });
 
     book.create(newBook, (err, book) => {
@@ -109,10 +110,11 @@ router.post('/:id', requireAuth, (req, res, next) => {
 
      let updatedBook = book({
       "_id": id,
-      "title": req.body.Title,
-      "price": req.body.Price,
-      "author": req.body.Author,
-      "genre": req.body.Genre
+      "Title": req.body.title,
+      "Description": req.body.description,
+      "Price": req.body.price,
+      "Author": req.body.author,
+      "Genre": req.body.genre
     });
 
     book.update({_id: id}, updatedBook, (err) => {
